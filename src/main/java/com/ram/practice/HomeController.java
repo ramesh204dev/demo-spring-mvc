@@ -15,8 +15,9 @@ public class HomeController {
         return "index"; // Redirects to index.html (Thymeleaf)
     }
 
+    @GetMapping("/user")
     public String getUser(Model mode){
         mode.addAttribute("user",userService.getUser());
-        return "user"; //returns user.html
+        return "index"; //returns user.html
     }
 }
